@@ -100,7 +100,12 @@ Driver.StepMove = function (step, type) {
 ObjectHistory = {}
 
 Mapping = {
-    map: currentMap,
+    map: currentMap || {
+        size : {
+            col: 0,
+            row: 0
+        }
+    },
     size: {
         col: currentMap.size.col,
         row: currentMap.size.row

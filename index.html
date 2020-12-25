@@ -2,6 +2,7 @@
 
 <head>
     <title>GST-Codefest2019: Test API</title>
+    <script src="jquery-3.5.1.min.js"></script>
     <script src="socket.io.js"></script>
     <script src="lodash.min.js"></script>
 </head>
@@ -18,6 +19,10 @@
     <script src="objects.js"></script>
     <script src="main.js"></script>
     <button id="start-stop" onclick="onStartDirection()">Start</button>
+    <label for="manual">
+        <input type="text" id="manual" placeholder="direction">
+        <button onclick="onManualDrive()">Manual drive</button>
+    </label>
 </body>
 
 </html>

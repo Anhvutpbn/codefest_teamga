@@ -2,7 +2,7 @@
 // Reference link https://socket.io
 // <script src="socket.io.js"></script>
 
-const gameId = '6da72bd4-b959-4091-aca4-be6a644cd4ec';
+const gameId = 'cca68f3d-ff5b-47a0-a132-c57313d2bc3f';
 const playerId = 'player2-xxx';
 
 // Connecto to API App server

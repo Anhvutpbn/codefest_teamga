@@ -58,15 +58,20 @@ socket.on('drive player', (res) => {
     console.log('[Socket] drive-player responsed, res: ', res);
 });
 function onStartDirection(){
-    stop = !stop;
-    if(stop) {
-        $('#start-stop').html('Start')
+    let btn = $('#start-stop')
+    if(btn.html() === 'Stop') {
+        socket.emit("dirve player", {direction: D_STOP})
+        btn.html('Start')
     }else{
         drive()
-        $('#start-stop').html('Stop')
+        btn.html('Stop')
     }
+}
+function onManualDrive() {
+    drive($('#manual').val())
 }
 
 function drive(d){
-    socket.emit("dirve player", {direction: d})
+    console.log(d)
+    socket.emit("drive player", {direction: d})
 }
